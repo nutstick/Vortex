@@ -7,14 +7,13 @@ public class GameManager : MonoBehaviour {
 
     public Text gameAdvice;
     public Terrain terrain;
-    public float startWait;
+	public int startWait;
 
-    IEnumerator FindTerrain()
+	IEnumerator FindTerrain()
     {
-        yield return new WaitForSecond(startWait);
+		yield return new WaitForSeconds(5);
 
-        gameAdvice = "Please capture Terrian pattern.";
-        gameAdvice.setActive();
+		gameAdvice.text = "Please capture Terrian pattern.";
         
         while (true)
         {
@@ -27,7 +26,7 @@ public class GameManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		StartCoroutine(FindTerrain());
 	}
 	
 	// Update is called once per frame
