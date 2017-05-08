@@ -3,8 +3,7 @@ using System.Collections;
 
 public class laserScript : MonoBehaviour
 {
-
-    LineRenderer lineRenderer;
+    private LineRenderer lineRenderer;
 
     void Awake()
     {
@@ -13,7 +12,6 @@ public class laserScript : MonoBehaviour
     void Start()
     {
         lineRenderer = GetComponent<LineRenderer>();
-
     }
 
     void Update()
@@ -33,7 +31,7 @@ public class laserScript : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(currentHit, currentFoward, out hit, Mathf.Infinity))
             {
-                Debug.Log(hit.point);
+                //Debug.Log(hit.point);
                 lineRenderer.positionCount = i + 2;
                 lineRenderer.SetPosition(i + 1, hit.point);
 
@@ -43,12 +41,19 @@ public class laserScript : MonoBehaviour
                     currentFoward = pos;
                     currentFoward.Normalize();
                     currentHit = hit.point;
+                } else if (hit.collider.tag == "Goal")
+                {
+                    GoalController goal = hit.collider.gameObject.GetComponent<GoalController>();
+                    goal.IsHit = true;
+                    break;
                 } else
                 {
                     break;
                 }
             } else
             {
+                lineRenderer.positionCount = i + 2;
+                lineRenderer.SetPosition(i + 1, currentHit + currentFoward * 200);
                 break;
             }
         }
