@@ -60,10 +60,10 @@
      <Compile Include="Assets\SF UI Sample\Scripts\ShowSliderValue.cs" />
      <Compile Include="Assets\SF UI Sample\Scripts\TiltWindow.cs" />
      <Compile Include="Assets\Scripts\GoalController.cs" />
-     <Compile Include="Assets\Scripts\LaserScript2.cs" />
      <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
      <Compile Include="Assets\Scripts\QuitOnClick.cs" />
      <Compile Include="Assets\Scripts\ShotLaser.cs" />
+     <Compile Include="Assets\Scripts\SplitLaser.cs" />
      <Compile Include="Assets\Scripts\Turnable.cs" />
      <Compile Include="Assets\Scripts\laserScript.cs" />
      <None Include="Assets\SF UI Sample\Fonts\Jupiter\LICENSE.txt" />

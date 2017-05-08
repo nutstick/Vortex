@@ -33,7 +33,13 @@ public class laserScript : MonoBehaviour
             {
                 //Debug.Log(hit.point);
                 lineRenderer.positionCount = i + 2;
-                lineRenderer.SetPosition(i + 1, hit.point);
+                if (hit.collider.tag == "Split")
+                {
+                    lineRenderer.SetPosition(i + 1, hit.collider.transform.position);
+                } else
+                {
+                    lineRenderer.SetPosition(i + 1, hit.point);
+                }
 
                 if (hit.collider.tag == "Mirror")
                 {
@@ -46,6 +52,14 @@ public class laserScript : MonoBehaviour
                     GoalController goal = hit.collider.gameObject.GetComponent<GoalController>();
                     goal.IsHit = true;
                     break;
+                } else if (hit.collider.tag == "Split")
+                {
+                    SplitLaser splitter = hit.collider.gameObject.GetComponent<SplitLaser>();
+                    splitter.isHit = true;
+                    currentFoward =  Quaternion.Euler(0, -45, -90) * hit.collider.transform.forward;
+                    currentHit = hit.collider.transform.position;
+                    splitter.currentFoward = new Vector3(-1, 0, 1);
+                    splitter.currentHit = hit.collider.transform.position;
                 } else
                 {
                     break;
