@@ -87,6 +87,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Black Hole\Script\Demo.cs" />
+    <Compile Include="Assets\Black Hole\Script\FreeCamera.cs" />
     <Compile Include="Assets\SF UI Sample\Scripts\ActiveStateToggler.cs" />
     <Compile Include="Assets\SF UI Sample\Scripts\ApplicationManager.cs" />
     <Compile Include="Assets\SF UI Sample\Scripts\ChangeColor.cs" />
@@ -98,14 +100,24 @@
     <Compile Include="Assets\SF UI Sample\Scripts\ScrollDetailTexture.cs" />
     <Compile Include="Assets\SF UI Sample\Scripts\ShowSliderValue.cs" />
     <Compile Include="Assets\SF UI Sample\Scripts\TiltWindow.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\GoalController.cs" />
     <Compile Include="Assets\Scripts\LaserScript2.cs" />
+    <Compile Include="Assets\Scripts\LoadLevelData.cs" />
     <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
+    <Compile Include="Assets\Scripts\MultiplayerGameManager.cs" />
     <Compile Include="Assets\Scripts\QuitOnClick.cs" />
     <Compile Include="Assets\Scripts\ShotLaser.cs" />
+    <Compile Include="Assets\Scripts\Terrain.cs" />
     <Compile Include="Assets\Scripts\Turnable.cs" />
     <Compile Include="Assets\Scripts\laserScript.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Black Hole\ReadMe.txt" />
+    <None Include="Assets\Black Hole\Shader\Black Hole.shader" />
+    <None Include="Assets\Materials\Boxes and Barrels\Info.txt" />
+    <None Include="Assets\Materials\MirrorReflection.shader" />
+    <None Include="Assets\Resources\level1-1.xml" />
     <None Include="Assets\SF UI Sample\Fonts\Jupiter\LICENSE.txt" />
     <None Include="Assets\SF UI Sample\Materials\UI-Default-No-Alpha.shader" />
     <None Include="Assets\SF UI Sample\Textures and Sprites\SF UI\Background\LICENSE.txt" />
