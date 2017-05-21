@@ -166,11 +166,11 @@ public class GameManager : MonoBehaviour {
                 if (terrain.IsFound) gameState = GameState.Play;
                 break;
             case GameState.Win:
+                ItemBar.SetActive(false);
                 WinPanel.SetActive(true);
                 break;
             default: break;
         }
-        Debug.Log(gameState);
 	}
 
     void AddIcon(string name, string tag)
@@ -232,9 +232,9 @@ public class GameManager : MonoBehaviour {
         if (centerText)
         {
             centerText.text = levelController.Level;
+            centerText.transform.gameObject.SetActive(false);
         }
         yield return new WaitForSeconds(startWait);
-        Debug.Log("1");
         if (centerText)
         {
             centerText.text = "";

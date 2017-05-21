@@ -79,9 +79,9 @@ public class SplitLaser : MonoBehaviour
                 {
                     SplitLaser splitter = hit.collider.gameObject.GetComponent<SplitLaser>();
                     splitter.isHit = true;
-                    currentFoward = Quaternion.Euler(0, -45, -90) * hit.collider.transform.forward;
+                    currentFoward = Quaternion.AngleAxis(-45, splitter.transform.forward) * splitter.transform.up;
                     currentHit = hit.collider.transform.position;
-                    splitter.currentFoward = new Vector3(-1, 0, 1);
+                    splitter.currentFoward = Quaternion.AngleAxis(45, splitter.transform.forward) * splitter.transform.up; ;
                     splitter.currentHit = hit.collider.transform.position;
                 }
                 else
