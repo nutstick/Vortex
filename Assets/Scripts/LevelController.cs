@@ -14,6 +14,13 @@ public class LevelController : MonoBehaviour {
     void Awake ()
     {
         DontDestroyOnLoad(gameObject);
+
+        if (FindObjectsOfType(GetType()).Length > 1)
+        {
+            Destroy(gameObject);
+        }
+
+        level = "1-1";
     }
 
 	// Use this for initialization

@@ -114,9 +114,11 @@
     <Compile Include="Assets\SF UI Sample\Scripts\ShowSliderValue.cs" />
     <Compile Include="Assets\SF UI Sample\Scripts\TiltWindow.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\GoToNextLevel.cs" />
     <Compile Include="Assets\Scripts\GoalController.cs" />
     <Compile Include="Assets\Scripts\LevelController.cs" />
     <Compile Include="Assets\Scripts\LoadLevelData.cs" />
+    <Compile Include="Assets\Scripts\LoadLevelOnClick.cs" />
     <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
     <Compile Include="Assets\Scripts\ModelSwap.cs" />
     <Compile Include="Assets\Scripts\MultiplayerGameManager.cs" />

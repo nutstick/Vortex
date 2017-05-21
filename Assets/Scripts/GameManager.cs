@@ -8,7 +8,7 @@ using Vuforia;
 
 public class GameManager : MonoBehaviour {
 
-    enum GameState { LoadLevel, InitializedLevel, Play, Win, Setting, LostTrack };
+    enum GameState { LoadLevel, InitializedLevel, Play, Win, Setting, LostTrack, DisplayLevelName };
 
     private GameState gameState;
     private LevelController levelController;
@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour {
     private List<string> trackersName;
 
     public Text gameAdvice;
+    public Text centerText;
     public GameObject WinPanel;
     public GameObject ItemBar;
 
@@ -34,6 +35,15 @@ public class GameManager : MonoBehaviour {
 
     void Awake()
     {
+        if (centerText)
+        {
+            centerText.text = "";
+        }
+        if (gameAdvice)
+        {
+            gameAdvice.text = "";
+        }
+
         gameState = GameState.LoadLevel;
         try
         {
@@ -49,7 +59,7 @@ public class GameManager : MonoBehaviour {
 	void Start ()
     {
         string level = levelController.Level;
-        GameObject levelTerrian = (GameObject)Resources.Load("levels/" + "1-1", typeof(GameObject));
+        GameObject levelTerrian = (GameObject)Resources.Load("levels/" + levelController.Level, typeof(GameObject));
 
         try
         {
@@ -119,6 +129,7 @@ public class GameManager : MonoBehaviour {
         switch (gameState)
         {
             case GameState.LoadLevel: break;
+            case GameState.DisplayLevelName: break;
             case GameState.InitializedLevel:
                 ItemBar.SetActive(false);
                 WinPanel.SetActive(false);
@@ -156,11 +167,10 @@ public class GameManager : MonoBehaviour {
                 break;
             case GameState.Win:
                 WinPanel.SetActive(true);
-                objectTracker.Stop();
-                objectTracker.DestroyAllDataSets(false);
                 break;
             default: break;
         }
+        Debug.Log(gameState);
 	}
 
     void AddIcon(string name, string tag)
@@ -213,6 +223,32 @@ public class GameManager : MonoBehaviour {
             }
         }
 
+        gameState = GameState.DisplayLevelName;
+        StartCoroutine(DisplayLevelName());
+    }
+
+    IEnumerator DisplayLevelName()
+    {
+        if (centerText)
+        {
+            centerText.text = levelController.Level;
+        }
+        yield return new WaitForSeconds(startWait);
+        Debug.Log("1");
+        if (centerText)
+        {
+            centerText.text = "";
+        }
         gameState = GameState.InitializedLevel;
     }
+
+
+    void OnDestroy()
+    {
+        // objectTracker.Stop();
+        // objectTracker.DestroyAllDataSets(false);
+        VuforiaARController.Instance.UnregisterVuforiaStartedCallback(LoadDataSet);
+        Debug.Log("-------------");
+    }
+
 }
