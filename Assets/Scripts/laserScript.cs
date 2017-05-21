@@ -23,7 +23,6 @@ public class laserScript : MonoBehaviour
     {
         Vector3 currentHit = transform.position;
         Vector3 currentFoward = transform.forward;
-        lineRenderer.enabled = true;
         lineRenderer.positionCount = 1;
         lineRenderer.SetPosition(0, currentHit);
         for (int i = 0; i < 20; i++)
