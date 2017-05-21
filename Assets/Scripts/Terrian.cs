@@ -4,11 +4,19 @@ using UnityEngine;
 using Vuforia;
 
 public class Terrian : MonoBehaviour {
-    public List<GoalController> goals;
 
     private DefaultTrackableEventHandler mDefaultTrackableEventHandler;
     private bool isFound;
     private bool isWin;
+
+    public GameObject A;
+    public GameObject B;
+    public GameObject C;
+    public GameObject D;
+    public GameObject E;
+    public GameObject F;
+    public GameObject G;
+    public List<GoalController> goals;
 
     public bool IsWin { get { return isWin; } }
 

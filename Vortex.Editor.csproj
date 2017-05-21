@@ -172,7 +172,7 @@
     <None Include="Assets\StreamingAssets\QCAR\C.xml" />
     <None Include="Assets\StreamingAssets\QCAR\D.xml" />
     <None Include="Assets\StreamingAssets\QCAR\E.xml" />
-    <None Include="Assets\StreamingAssets\QCAR\G.xml" />
+    <None Include="Assets\StreamingAssets\QCAR\F.xml" />
     <None Include="Assets\StreamingAssets\QCAR\Stone.xml" />
     <None Include="Assets\Vuforia\Editor\Scripts\Vuforia.UnityExtensions.Editor.XML" />
     <None Include="Assets\Vuforia\Editor\WebcamProfiles\profiles.xml" />

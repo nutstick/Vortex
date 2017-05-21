@@ -113,7 +113,6 @@
     <Compile Include="Assets\SF UI Sample\Scripts\ScrollDetailTexture.cs" />
     <Compile Include="Assets\SF UI Sample\Scripts\ShowSliderValue.cs" />
     <Compile Include="Assets\SF UI Sample\Scripts\TiltWindow.cs" />
-    <Compile Include="Assets\Scripts\DynamicDataSetLoader.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\GoalController.cs" />
     <Compile Include="Assets\Scripts\LevelController.cs" />
@@ -124,7 +123,6 @@
     <Compile Include="Assets\Scripts\QuitOnClick.cs" />
     <Compile Include="Assets\Scripts\ShotLaser.cs" />
     <Compile Include="Assets\Scripts\SplitLaser.cs" />
-    <Compile Include="Assets\Scripts\Terrain.cs" />
     <Compile Include="Assets\Scripts\Terrian.cs" />
     <Compile Include="Assets\Scripts\TrackableEventHandler.cs" />
     <Compile Include="Assets\Scripts\Turnable.cs" />
@@ -181,7 +179,7 @@
     <None Include="Assets\StreamingAssets\QCAR\C.xml" />
     <None Include="Assets\StreamingAssets\QCAR\D.xml" />
     <None Include="Assets\StreamingAssets\QCAR\E.xml" />
-    <None Include="Assets\StreamingAssets\QCAR\G.xml" />
+    <None Include="Assets\StreamingAssets\QCAR\F.xml" />
     <None Include="Assets\StreamingAssets\QCAR\Stone.xml" />
     <None Include="Assets\Vuforia\Editor\Scripts\Vuforia.UnityExtensions.Editor.XML" />
     <None Include="Assets\Vuforia\Editor\WebcamProfiles\profiles.xml" />

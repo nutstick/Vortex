@@ -35,7 +35,6 @@ public class SplitLaser : MonoBehaviour
         {
             DelLaser();
         }
-        Debug.Log(isHit);
         isHit = false;
     }
 

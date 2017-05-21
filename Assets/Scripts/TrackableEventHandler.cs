@@ -38,7 +38,6 @@ public class TrackableEventHandler : MonoBehaviour, ITrackableEventHandler
                                     TrackableBehaviour.Status previousStatus,
                                     TrackableBehaviour.Status newStatus)
     {
-        Debug.Log(newStatus);
         if (newStatus == TrackableBehaviour.Status.DETECTED ||
             newStatus == TrackableBehaviour.Status.TRACKED ||
             newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED)
@@ -82,7 +81,7 @@ public class TrackableEventHandler : MonoBehaviour, ITrackableEventHandler
         }
 
         mTerrian.IsFound = true;
-        Debug.Log("MyTrackable " + mTrackableBehaviour.TrackableName + " found");
+        // Debug.Log("MyTrackable " + mTrackableBehaviour.TrackableName + " found");
     }
 
 
@@ -111,7 +110,7 @@ public class TrackableEventHandler : MonoBehaviour, ITrackableEventHandler
         }
 
         mTerrian.IsFound = false;
-        Debug.Log("MyTrackable " + mTrackableBehaviour.TrackableName + " lost");
+        /// Debug.Log("MyTrackable " + mTrackableBehaviour.TrackableName + " lost");
     }
 
     #endregion // PRIVATE_METHODS
