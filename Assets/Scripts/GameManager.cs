@@ -232,11 +232,11 @@ public class GameManager : MonoBehaviour {
         if (centerText)
         {
             centerText.text = levelController.Level;
-            centerText.transform.gameObject.SetActive(false);
         }
         yield return new WaitForSeconds(startWait);
         if (centerText)
         {
+            centerText.transform.gameObject.SetActive(false);
             centerText.text = "";
         }
         gameState = GameState.InitializedLevel;
